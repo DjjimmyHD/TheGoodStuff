@@ -1,7 +1,7 @@
 <template>
 
   <div id="about">
-    <v-layout row wrap>
+    <!-- <v-layout row wrap>
       <v-flex xs12>
         <v-card id="me" class="elevation-5">
         <v-card-text>
@@ -29,7 +29,35 @@
           <v-card-text>The Future</v-card-text>
         </v-card>
       </v-flex>
-    </v-layout>
+    </v-layout> -->
+    <div>
+   <v-tabs dark v-model="active">
+     <v-tabs-bar slot="activators" class="cyan">
+       <v-tabs-item
+         v-for="tab in tabs"
+         :key="tab"
+         :href="'#' + tab"
+         ripple
+       >
+         Item {{ tab.slice(-1) }}
+       </v-tabs-item>
+       <v-tabs-slider class="yellow"></v-tabs-slider>
+     </v-tabs-bar>
+     <v-tabs-content
+       v-for="tab in tabs"
+       :key="tab"
+       :id="tab"
+     >
+       <v-card flat>
+         <v-card-text>{{ text }}</v-card-text>
+       </v-card>
+     </v-tabs-content>
+   </v-tabs>
+
+   <div class="text-xs-center mt-3">
+     <v-btn @click.native="next">next tab</v-btn>
+   </div>
+ </div>
   </div>
 
 

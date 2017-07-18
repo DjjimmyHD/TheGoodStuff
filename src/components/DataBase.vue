@@ -1,19 +1,12 @@
 <template>
-
-
-
     <div id="add-event">
-        <h3>Add A New Event</h3>
+        <h3>Add New Event</h3>
         <form v-if="!submitted">
             <label>Event Title:</label>
             <input type="text" v-model.lazy="event.title" required />
             <label>Event Content:</label>
             <textarea v-model.lazy.trim="event.content"></textarea>
             <div id="checkboxes">
-              <!-- <p>
-  <input type="checkbox" id="test5" />
-  <label for="test5">Red</label>
-</p> -->
                 <p>Event Categories:</p>
                 <label for="birthday">Birthday</label>
                 <input id="birthday" type="checkbox" value="birthday" v-model="event.categories" />
@@ -26,29 +19,35 @@
                 <label for="other">Other</label>
                 <input id="other" type="checkbox" value="other" v-model="event.categories" />
             </div>
-            <label>Author:</label>
-            <select v-model="event.author">
+            <div id="date">
+              <label for="when">Choose Event Date</label>
+              <input type="date" v-model.lazy="event.date" name="when">
+
+            </div>
+            <label>Author</label>
+            <select browser-default v-model="event.author">
+              <option value="" disabled selected>Who are you?</option>
                 <option v-for="author in authors">{{ author }}</option>
             </select>
             <hr />
             <button v-on:click.prevent="post">Add Event</button>
         </form>
         <div v-if="submitted">
-            <h3>Thanks for adding your event go home or reload to</h3>
+            <h3>Thanks for adding your event!</h3>
         </div>
         <div id="preview">
-        <h3>Preview Submission</h3>
+        <h3>See What You Say</h3>
         <p>Event title: {{ event.title }}</p>
         <p>Event content:</p>
-        <p style="white-space: pre">{{ event.content }}</p>
+        <p>{{ event.content }}</p>
         <p>Event Type:</p>
-        <ul>
-            <li v-for="category in event.categories">{{ category }}</li>
-        </ul>
+            <p v-for="category in event.categories">{{ category }}</p>
+        <p>Date: {{event.date}} </p>
         <p>Author: {{ event.author }}</p>
     </div>
-
+  <button v-if="submitted"><router-link to="/DB" exact>Add Another Event</router-link></button>
     </div>
+
       </div>
 </template>
 
@@ -63,20 +62,16 @@ export default {
                 title: '',
                 content: '',
                 categories: [],
-                author: ''
+                author: '',
+                date:''
             },
             authors: ['Daisy', 'Logan ', 'Jessica', 'James', 'Dylan', 'Angie', 'Sarah', 'Mom', 'Dad'],
             submitted: false
         }
     },
-    created() {
-        this.$http.get('https://galvanize-cors.herokuapp.com/https://database-testing-25c2b.firebaseio.com/.json').then(function(data){
-              console.log('data',data);
-        });
-    },
     methods: {
         post: function(){
-            this.$http.post('https://database-testing-25c2b.firebaseio.com/.json', this.event).then(function(data){
+            this.$http.post('https://capstone-endpoint.firebaseio.com/.json', this.event).then(function(data){
                 console.log('data',data);
                 this.submitted = true;
             });
