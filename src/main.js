@@ -9,7 +9,7 @@ import App from './App';
 import router from './router';
 
 Vue.use(Vuetify);
-Vue.use(VueResource)
+Vue.use(VueResource);
 
 
 Vue.config.productionTip = false

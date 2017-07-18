@@ -69,10 +69,15 @@ export default {
             submitted: false
         }
     },
+    created() {
+        this.$http.get('https://galvanize-cors.herokuapp.com/https://database-testing-25c2b.firebaseio.com/.json').then(function(data){
+              console.log('data',data);
+        });
+    },
     methods: {
         post: function(){
-            this.$http.post('https://the-good-stuff-db.firebaseio.com/posts.json', this.blog).then(function(data){
-                console.log(data);
+            this.$http.post('https://database-testing-25c2b.firebaseio.com/.json', this.event).then(function(data){
+                console.log('data',data);
                 this.submitted = true;
             });
         }
