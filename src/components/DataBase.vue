@@ -45,7 +45,7 @@
         <p>Date: {{event.date}} </p>
         <p>Author: {{ event.author }}</p>
     </div>
-  <button v-if="submitted"><router-link to="/DB" exact>Add Another Event</router-link></button>
+  <button v-if="submitted"><router-link to="/GoodStuff" exact>Back to Events Page</router-link></button>
     </div>
 
       </div>

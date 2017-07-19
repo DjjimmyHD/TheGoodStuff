@@ -1,15 +1,6 @@
 <template>
 
-<!--
-  <footer class="page-footer #ff8a65 deep-orange lighten-2">
 
-          <div class="footer-copyright">
-            <div class="container">
-            <p>© 2014 Copyright Text</p>
-
-            </div>
-          </div>
-        </footer> -->
         <div >
       <v-card id="btm-nav" height="100px">
     <v-bottom-nav absolute value="true" class="transparent">
@@ -22,7 +13,7 @@
         <v-icon>favorite</v-icon>
       </v-btn>
       <v-btn flat dark class="white--text">
-        <span>Nearby</span>
+      <a href="google.com"><span>Nearby</span></a>
         <v-icon>place</v-icon>
       </v-btn>
     </v-bottom-nav>

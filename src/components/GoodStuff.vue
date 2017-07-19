@@ -1,7 +1,7 @@
 <template>
 
 <div id="good-stuff">
-  <h1><small>Good Stuff Landing Page</small></h1>
+  <h1 class="center">Hello Family!</h1>
   <message></message>
   <calendar></calendar>
 </div>
