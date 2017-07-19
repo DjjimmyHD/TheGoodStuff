@@ -6,13 +6,13 @@
       <v-flex xs12>
         <v-card id="me" class="elevation-5">
         <v-card-text>
-          <p class="text-xs-center">About Me</p>
+          <h6 class="text-xs-center">About Me</h6>
 
           <v-layout row justify-center style="position: relative;">
-             <v-dialog v-model="dialog" lazy absolute>
-               <v-btn primary dark slot="activator">Take the trip</v-btn>
 
-               <v-card>
+               <v-btn primary dark @click="test = true">Take the trip</v-btn>
+
+               <v-card v-if="test">
                  <v-card-title>
                    <div class="headline">Rocky Mountain High Colorado</div>
                  </v-card-title>
@@ -20,10 +20,10 @@
                  <v-card-actions>
                    <v-spacer></v-spacer>
 
-                   <v-btn class="green--text darken-1" flat="flat" @click.stop="dialog = false">Neat</v-btn>
+                   <v-btn class="green--text darken-1" flat="flat" @click.stop="test = false">Neat</v-btn>
                  </v-card-actions>
                </v-card>
-             </v-dialog>
+
            </v-layout>
 
 
@@ -46,7 +46,7 @@
                  <v-card-actions>
                    <v-spacer></v-spacer>
 
-                   <v-btn class="green--text darken-1" flat="flat" @click.native="dialog = false">That's neat</v-btn>
+                   <v-btn  flat="flat" @click.native="dialog = false">That's neat</v-btn>
                  </v-card-actions>
                </v-card>
              </v-dialog>
@@ -88,7 +88,7 @@
                  <v-card-actions>
                    <v-spacer></v-spacer>
 
-                   <v-btn class="green--text darken-1" flat="flat" @click.native="dialog = false">Got it</v-btn>
+                   <v-btn class="green--text darken-1" flat="flat" @click.prevent.stop="dialog = false">Got it</v-btn>
                  </v-card-actions>
                </v-card>
              </v-dialog>
@@ -152,7 +152,8 @@ export default {
   data () {
     return {
       dialog: false,
-      test: true,
+      test: false
+
 
 
     }
@@ -162,15 +163,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#about {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+#about, h6 {
   color: #20BF55;
   text-align: center;
 }
 #me, #journey, #project, #tech, #future {
   background-color: #F2EFEA;
+}
+v-btn {
+  background-color: black;
 }
 
 

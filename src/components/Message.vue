@@ -1,10 +1,9 @@
 <template>
 
-
       <v-layout row>
         <v-flex xs12 sm6 offset-sm3>
-          <v-card>
-            <v-toolbar class="cyan" dark>
+          <v-card id="event-card">
+            <v-toolbar id="event-top">
               <v-toolbar-title>Event List</v-toolbar-title>
             </v-toolbar>
             <v-list two-line>
@@ -17,9 +16,13 @@
                     <v-list-tile-sub-title v-html="item.date"></v-list-tile-sub-title>
                   </v-list-tile-content>
                 </v-list-tile>
+                <v-card-text></v-card-text>
               </template>
             </v-list>
-          </v-card>
+            <v-card-text>
+
+          </v-card-text>
+        </v-card>
         </v-flex>
       </v-layout>
 
@@ -39,6 +42,7 @@ data () {
   }
 },  created() {
         this.$http.get('https://capstone-endpoint.firebaseio.com/.json').then(function(data){
+          console.log(data);
             return data.json()
         }).then(function(data){
             var eventsArray = [];
@@ -56,6 +60,13 @@ data () {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+#event-top{
+background-color: #FF8A65;
+
+}
+#event-card{
+  background-color: #F2EFEA;
+}
 
 
 
