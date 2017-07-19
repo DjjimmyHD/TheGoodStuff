@@ -18,7 +18,9 @@
                 <input id="graduation"type="checkbox" value="graduation" v-model="event.categories" />
                 <label for="other">Other</label>
                 <input id="other" type="checkbox" value="other" v-model="event.categories" />
+
             </div>
+
             <div id="date">
               <label for="when">Choose Event Date</label>
               <input type="date" v-model.lazy="event.date" name="when">
