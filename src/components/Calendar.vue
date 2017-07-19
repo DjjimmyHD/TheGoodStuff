@@ -53,7 +53,7 @@
   					</tr>
   					<tr>
   						<td>9</td>
-  						<td class="event">10</td>
+  						<td >10</td>
   						<td>11</td>
   						<td>12</td>
   						<td>13</td>
@@ -62,11 +62,11 @@
   					</tr>
   					<tr>
   						<td>16</td>
-  						<td class="current-day">17</td>
+  						<td>17</td>
   						<td>18</td>
-  						<td>19</td>
-  						<td>20</td>
-  						<td class="event">21</td>
+  						<td class="current-day">19</td>
+  						<td class="event">20</td>
+  						<td>21</td>
   						<td>22</td>
   					</tr>
 
@@ -76,7 +76,7 @@
   						<td>25</td>
   						<td>26</td>
   						<td>27</td>
-  						<td>28</td>
+  						<td class="event">28</td>
   						<td>29</td>
   					</tr>
   					<tr>

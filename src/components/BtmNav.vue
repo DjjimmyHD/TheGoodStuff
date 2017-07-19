@@ -1,26 +1,13 @@
 <template>
 
+  <v-footer id="btm-nav" class="pa-3">
+    <h4 class="white--text">"The Good Stuff" is a James Schultz Creation</h4>
 
-        <div >
-      <v-card id="btm-nav" height="100px">
-    <v-bottom-nav absolute value="true" class="transparent">
-      <v-btn flat dark class="white--text" >
-        <span>Recents</span>
-        <v-icon>history</v-icon>
-      </v-btn>
-      <v-btn flat dark class="white--text">
-        <span>Favorites</span>
-        <v-icon>favorite</v-icon>
-      </v-btn>
-      <v-btn flat dark class="white--text">
-      <a href="google.com"><span>Nearby</span></a>
-        <v-icon>place</v-icon>
-      </v-btn>
-    </v-bottom-nav>
-  </v-card>
+    <v-spacer></v-spacer>
+    <h4 class="white--text">© {{ new Date().getFullYear() }}</h4>
 
+  </v-footer>
 
-</div>
 
 
 </template>
@@ -40,8 +27,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 #btm-nav{
+  height: auto;
   background-color: #FF8A65;
 }
+
 
 
 

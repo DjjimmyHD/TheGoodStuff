@@ -4,7 +4,7 @@
     <v-flex xs12 sm6 offset-sm3>
       <v-card id="me">
 
-        <v-card-title primary-title>
+        <v-card-title>
             <h3 class="pl-3">Hey! You found "The Good Stuff"</h3>
         </v-card-title>
         <v-card-text>
@@ -39,13 +39,6 @@ data () {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#landing {
-
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  align-content: center;
-}
 #me {
   background-color: #F2EFEA;
 }
