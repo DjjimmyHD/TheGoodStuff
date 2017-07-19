@@ -9,8 +9,9 @@
           <p class="text-xs-center">About Me</p>
 
           <v-layout row justify-center style="position: relative;">
-             <v-dialog v-model="meow" lazy absolute>
-               <v-btn primary dark slot="activator">Where I started</v-btn>
+             <v-dialog v-model="dialog" lazy absolute>
+               <v-btn primary dark slot="activator">Take the trip</v-btn>
+
                <v-card>
                  <v-card-title>
                    <div class="headline">Rocky Mountain High Colorado</div>
@@ -19,7 +20,7 @@
                  <v-card-actions>
                    <v-spacer></v-spacer>
 
-                   <v-btn class="green--text darken-1" flat="flat" @click.native="meow = false">Neat</v-btn>
+                   <v-btn class="green--text darken-1" flat="flat" @click.stop="dialog = false">Neat</v-btn>
                  </v-card-actions>
                </v-card>
              </v-dialog>
@@ -35,7 +36,7 @@
         <v-card id="journey">
           <v-card-text>My Journey</v-card-text>
           <v-layout row justify-center style="position: relative;">
-             <v-dialog v-model="cheese" lazy absolute>
+             <v-dialog v-model="dialog" lazy absolute>
                <v-btn primary dark slot="activator">Take the trip</v-btn>
                <v-card>
                  <v-card-title>
@@ -45,7 +46,7 @@
                  <v-card-actions>
                    <v-spacer></v-spacer>
 
-                   <v-btn class="green--text darken-1" flat="flat" @click.native="cheese = false">That's neat</v-btn>
+                   <v-btn class="green--text darken-1" flat="flat" @click.native="dialog = false">That's neat</v-btn>
                  </v-card-actions>
                </v-card>
              </v-dialog>
@@ -56,7 +57,7 @@
         <v-card id="project">
           <v-card-text>The Problem</v-card-text>
           <v-layout row justify-center style="position: relative;">
-             <v-dialog v-model="James" lazy absolute>
+             <v-dialog v-model="dialog" lazy absolute>
                <v-btn primary dark slot="activator">What is it?</v-btn>
                <v-card>
                  <v-card-title>
@@ -66,7 +67,7 @@
                  <v-card-actions>
                    <v-spacer></v-spacer>
 
-                   <v-btn class="green--text darken-1" flat="flat" @click.native="James = false">Got it</v-btn>
+                   <v-btn class="green--text darken-1" flat="flat" @click.native="dialog = false">Got it</v-btn>
                  </v-card-actions>
                </v-card>
              </v-dialog>
@@ -77,7 +78,7 @@
         <v-card id="tech">
           <v-card-text>The Capstone Shuffle</v-card-text>
           <v-layout row justify-center style="position: relative;">
-             <v-dialog v-model="stuff" lazy absolute>
+             <v-dialog v-model="dialog" lazy absolute>
                <v-btn primary dark slot="activator">Growing Pains</v-btn>
                <v-card>
                  <v-card-title>
@@ -87,7 +88,7 @@
                  <v-card-actions>
                    <v-spacer></v-spacer>
 
-                   <v-btn class="green--text darken-1" flat="flat" @click.native="stuff = false">Got it</v-btn>
+                   <v-btn class="green--text darken-1" flat="flat" @click.native="dialog = false">Got it</v-btn>
                  </v-card-actions>
                </v-card>
              </v-dialog>
@@ -98,7 +99,7 @@
         <v-card id="future">
           <v-card-text>The Future</v-card-text>
           <v-layout row justify-center style="position: relative;">
-             <v-dialog v-model="peaches" lazy absolute>
+             <v-dialog v-model="dialog" lazy absolute>
                <v-btn primary dark slot="activator">Looking forward</v-btn>
                <v-card>
                  <v-card-title>
@@ -108,7 +109,7 @@
                  <v-card-actions>
                    <v-spacer></v-spacer>
 
-                   <v-btn class="green--text darken-1" flat="flat" @click.native="peaches = false">Got it</v-btn>
+                   <v-btn class="green--text darken-1" flat="flat" @click.native="dialog = false">Got it</v-btn>
                  </v-card-actions>
                </v-card>
              </v-dialog>
@@ -119,7 +120,7 @@
         <v-card id="future">
           <v-card-text>Contact Me</v-card-text>
           <v-layout row justify-center style="position: relative;">
-             <v-dialog v-model="contact" lazy absolute>
+             <v-dialog v-model="dialog" lazy absolute>
                <v-btn primary dark slot="activator">You could just yell..</v-btn>
                <v-card>
                  <v-card-title>
@@ -132,7 +133,7 @@
                  <v-card-actions>
                    <v-spacer></v-spacer>
 
-                   <v-btn class="green--text darken-1" flat="flat" @click.native="contact = false">Got it</v-btn>
+                   <v-btn class="green--text darken-1" flat="flat" @click.native="dialog = false">Got it</v-btn>
                  </v-card-actions>
                </v-card>
              </v-dialog>
@@ -150,13 +151,8 @@ export default {
   name: 'about',
   data () {
     return {
+      dialog: false,
       test: true,
-      meow: false,
-      cheese: false,
-      James: false,
-      stuff: false,
-      peaches: false,
-      contact: false,
 
 
     }

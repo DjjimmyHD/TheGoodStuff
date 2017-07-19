@@ -1,10 +1,10 @@
 <template>
 
   <v-footer id="btm-nav" class="pa-3">
-    <h4 class="white--text">"The Good Stuff" is a James Schultz Creation</h4>
+    <h6 class="white--text">"The Good Stuff" is a James Schultz Creation</h6>
 
     <v-spacer></v-spacer>
-    <h4 class="white--text">© {{ new Date().getFullYear() }}</h4>
+    <h6 class="white--text">© {{ new Date().getFullYear() }}</h6>
 
   </v-footer>
 
@@ -27,7 +27,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 #btm-nav{
-  height: auto;
+  height: 100%;
   background-color: #FF8A65;
 }
 
