@@ -6,12 +6,14 @@
         <v-card-text>
           <h6 class="text-xs-center">About Me</h6>
           <v-layout row justify-center style="position: relative;">
-            <v-btn id="butn" @click="about = true">Take the trip</v-btn>
+            <v-btn id="butn" @click="about = true">What About You?</v-btn>
             <v-card id="pop-out" class="elevation-10" v-if="about">
               <v-card-title>
-                <div class="headline ml-5">Rocky Mountain High Colorado</div>
+                <div class="headline ml-3">"Not all who wander are lost, but I have a terrible sense of direction"</div>
               </v-card-title>
-              <v-card-text>"Not all who wander are lost, but I have a terrible sense of direction"
+              <v-card-media src="/static/travolta.gif" height="400px">
+              </v-card-media>
+              <v-card-text>
                 <v-spacer></v-spacer>--- James Schultz.</v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
@@ -30,12 +32,14 @@
           <v-btn id="butn" @click="journey = true">Take the trip</v-btn>
           <v-card id="pop-out" class="elevation-10" v-if="journey">
             <v-card-title>
-              <div class="headline ml-5">I've worn a lot of hats none of them fit</div>
+              <div class="headline ml-3">"I get blown up, but I get up again. You're never gunna keep me down"</div>
             </v-card-title>
-            <v-card-text>"Life is about the journey, about appreciating the struggle. It doesnt matter how you get there as long as you get there."</v-card-text>
+            <v-card-media src="/static/splosion.gif" height="400px">
+            </v-card-media>
+            <v-card-text>---Chumbawumba</v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn id="butn" @click="journey = false">That's neat</v-btn>
+              <v-btn id="butn" @click="journey = false">That is dark James</v-btn>
             </v-card-actions>
           </v-card>
         </v-layout>
@@ -47,15 +51,17 @@
         <v-card-text>
         <h6 class="text-xs-center">The Problem</h6>
         <v-layout row justify-center style="position: relative;">
-          <v-btn id="butn" @click="project = true">What is it?</v-btn>
+          <v-btn id="butn" @click="project = true">Never enough time</v-btn>
           <v-card id="pop-out" class="elevation-10" v-if="project">
             <v-card-title>
-              <div class="headline ml-5">Not enough time for meaningful conversation</div>
+              <div class="headline ml-5">"Families are like branches on a tree. We grow in different directions, yet our roots remain the same."</div>
             </v-card-title>
-            <v-card-text>The good stuff is a way to share the improtant things in your life with the important people in your life</v-card-text>
+            <v-card-media src="/static/ohana.gif" height="400px">
+            </v-card-media>
+            <v-card-text>---The Giving Tree</v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn id="butn" @click="project = false">Got it</v-btn>
+              <v-btn id="butn" @click="project = false">The Good Stuff</v-btn>
             </v-card-actions>
           </v-card>
         </v-layout>
@@ -70,12 +76,14 @@
           <v-btn id="butn" @click="tech = true">Growing Pains</v-btn>
           <v-card id="pop-out" class="elevation-10" v-if="tech">
             <v-card-title>
-              <div class="headline ml-1">So much to learn so little time</div>
+              <div class="headline ml-1">"I never lose. I win or I learn"</div>
             </v-card-title>
-            <v-card-text>"I never lose, I win or I learn" ---Michael Scott</v-card-text>
+            <v-card-media src="/static/scott.gif" height="200px">
+            </v-card-media>
+            <v-card-text>---Michael Scott</v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn id="butn" @click="tech = false">Got it</v-btn>
+              <v-btn id="butn" @click="tech = false">Moving on...</v-btn>
             </v-card-actions>
           </v-card>
         </v-layout>
@@ -87,12 +95,14 @@
         <v-card-text>
         <h6 class="text-xs-center">The Future</h6>
         <v-layout row justify-center style="position: relative;">
-            <v-btn id="butn" @click="future = true">Looking forward</v-btn>
+            <v-btn id="butn" @click="future = true">Onward</v-btn>
             <v-card id="pop-out" class="elevation-10" v-if="future">
               <v-card-title>
-                <div class="headline ml-5">Use Vuex and Build A SQL DB</div>
+                <div class="headline ">"A good developer knows that a project is never done and it is never as good as you want it to be. It just needs to be good enough for production." </div>
               </v-card-title>
-              <v-card-text>I am passionate about this app I want to continue to work on it</v-card-text>
+              <v-card-media src="/static/bug.gif" height="500px">
+              </v-card-media>
+              <v-card-text>---Every Senior Dev Ever</v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
                 <v-btn id="butn" @click="future = false">Got it</v-btn>
@@ -105,23 +115,17 @@
     <v-flex  xs10 offset-xs1>
       <v-card id="contact" class="elevation-5">
         <v-card-text>
-        <h6 class="text-xs-center">Contact</h6>
+      <h6 class="text-xs-center"><router-link to="/DB" exact>Contact</router-link></h6>
         <v-layout row justify-center style="position: relative;">
             <v-btn id="butn" @click="contact = true">You could just yell...</v-btn>
             <v-card id="pop-out" class="elevation-10" v-if="contact">
               <v-card-title>
-                <div class="headline">James Schultz</div>
-                <br/>
-                <div class="headline">LinkedIn /ninjames101</div>
-                <br>
-                <div class="headline">Github /ninjames101</div>
-                <br>
-                <div class="headline">ninjames101.ninja</div>
+                <div class="headline">"How lucky am I to have something that makes saying goodbye so hard"</div>
               </v-card-title>
-              <v-card-text>"How lucky am I to have something that makes saying goodbye so hard"</v-card-text>
+              <v-card-text>---Pooh Bear</v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn id="butn" @click.native="contact= false">Got it</v-btn>
+                <v-btn id="butn" @click="contact= false">Big Finish</v-btn>
               </v-card-actions>
             </v-card>
         </v-layout>
@@ -155,6 +159,7 @@ export default {
 <style scoped>
 #about,
 h6 {
+
   color: #20BF55;
   text-align: center;
 }

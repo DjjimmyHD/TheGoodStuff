@@ -43,7 +43,8 @@ data () {
   background-color: #F2EFEA;
 }
 h3, h6 {
-  color: #20BF55;
+  /*color: #20BF55;*/
+  color: #FF8A65;
 }
 
 

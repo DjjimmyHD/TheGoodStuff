@@ -95,7 +95,8 @@ export default {
     max-width: 600px;
     padding: 20px;
 }
-label{
+p,label{
+    font-size: 20px;
     display: block;
     margin: 20px 0 10px;
 }
@@ -109,12 +110,13 @@ textarea{
 }
 #preview{
     padding: 10px 20px;
-    border: 1px solid #20BF55;
+    border: 1px solid #656565;
     margin: 30px 0;
 }
 h3{
     margin-top: 10px;
-    color: #20BF55;
+    /*color: #20BF55;*/
+    color: #FF8A65;
 
 }
 #checkboxes input{
