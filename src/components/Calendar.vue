@@ -72,7 +72,7 @@
 
   					<tr>
   						<td class="event">23</td>
-  						<td>24</td>
+  						<td class="event">24</td>
   						<td>25</td>
   						<td>26</td>
   						<td>27</td>

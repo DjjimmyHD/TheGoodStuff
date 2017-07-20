@@ -42,7 +42,9 @@ data () {
 #me {
   background-color: #F2EFEA;
 }
-
+h3, h6 {
+  color: #20BF55;
+}
 
 
 </style>
