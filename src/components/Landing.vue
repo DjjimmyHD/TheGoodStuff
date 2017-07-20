@@ -14,8 +14,52 @@
       </v-card>
     </v-flex>
   </v-layout>
+    <v-parallax src="/static/fam2.jpg" height="1000"></v-parallax>
+<v-layout>
+  <v-flex  xs3>
+    <v-card id="contact" class="elevation-5">
+    <v-card-title>
+    <h3 class="text-xs-center">LinkedIn</h3>
+  </v-card-title>
+  <v-card-text>
+    <h6>/ninjames101</h6>
+  </v-card-text>
 
-  <v-parallax src="/static/fam2.jpg" height="1000"></v-parallax>
+    </v-card>
+  </v-flex>
+  <v-flex  xs3>
+    <v-card id="contact" class="elevation-5">
+    <v-card-title>
+    <h3 class="text-xs-center">GitHub</h3>
+  </v-card-title>
+  <v-card-text>
+    <h6>/ninjames101</h6>
+  </v-card-text>
+
+    </v-card>
+  </v-flex>
+  <v-flex  xs3>
+    <v-card id="contact" class="elevation-5">
+    <v-card-title>
+    <h3 class="text-xs-center">Youtube</h3>
+  </v-card-title>
+  <v-card-text><h6> search "ninjames"</h6>
+  </v-card-text>
+
+    </v-card>
+  </v-flex>
+  <v-flex  xs3>
+    <v-card id="contact" class="elevation-5">
+    <v-card-title>
+    <h3 class="text-xs-center">Website</h3>
+  </v-card-title>
+  <v-card-text>
+    <h6>www.ninjames101.ninja</h6>
+  </v-card-text>
+
+    </v-card>
+  </v-flex>
+  </v-layout>
 
 
 

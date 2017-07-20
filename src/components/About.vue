@@ -115,7 +115,7 @@
     <v-flex  xs10 offset-xs1>
       <v-card id="contact" class="elevation-5">
         <v-card-text>
-      <h6 class="text-xs-center"><router-link to="/DB" exact>Contact</router-link></h6>
+      <h6 class="text-xs-center"><router-link to="/" exact>Contact</router-link></h6>
         <v-layout row justify-center style="position: relative;">
             <v-btn id="butn" @click="contact = true">You could just yell...</v-btn>
             <v-card id="pop-out" class="elevation-10" v-if="contact">
