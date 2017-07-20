@@ -1,5 +1,30 @@
 <template>
 
+      <!-- <v-layout row>
+        <v-flex xs12 sm6 offset-sm3>
+          <v-card id="event-card">
+            <v-toolbar id="event-top">
+              <v-toolbar-title>Event List</v-toolbar-title>
+            </v-toolbar>
+            <v-list three-line>
+              <template v-for="item in items">
+                <v-subheader v-if="item.title" v-text="item.title"></v-subheader>
+                <v-list-tile avatar v-else v-bind:key="item.title" href="javascript:;" download target="_blank">
+                  <v-list-tile-content>
+                    <v-list-tile-title v-text="item.title"></v-list-tile-title>
+                    <v-list-tile-sub-title v-html="item.date"></v-list-tile-sub-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+                <v-card-text></v-card-text>
+              </template>
+            </v-list>
+            <v-card-text>
+
+          </v-card-text>
+        </v-card>
+        </v-flex>
+      </v-layout> -->
+
       <v-layout row>
         <v-flex xs12 sm6 offset-sm3>
           <v-card id="event-card">
@@ -8,12 +33,11 @@
             </v-toolbar>
             <v-list two-line>
               <template v-for="item in items">
-                <v-subheader v-if="item.header" v-text="item.header"></v-subheader>
-                <v-divider v-else-if="item.divider" v-bind:inset="item.inset"></v-divider>
-                <v-list-tile avatar v-else v-bind:key="item.title" href="javascript:;" download target="_blank">
+                <v-subheader id="title" v-text="item.title"></v-subheader>
+                <v-list-tile avatar v-bind:key="item.title" href="javascript:;" download target="_blank">
                   <v-list-tile-content>
-                    <v-list-tile-title v-html="item.title"></v-list-tile-title>
-                    <v-list-tile-sub-title v-html="item.date"></v-list-tile-sub-title>
+                    <v-list-tile-title id="content" v-html="item.content"></v-list-tile-title>
+                    <v-list-tile-sub-title id="date" v-html="item.date"></v-list-tile-sub-title>
                   </v-list-tile-content>
                 </v-list-tile>
                 <v-card-text></v-card-text>
@@ -37,7 +61,11 @@ export default {
 name: 'message',
 data () {
   return {
-    items:[]
+    items:[],
+    inset:true,
+    divider:true
+
+
 
   }
 },  created() {
@@ -67,7 +95,16 @@ background-color: #FF8A65;
 #event-card{
   background-color: #F2EFEA;
 }
+#content{
+  color: #20BF55;
 
+}
+#date {
+  color: #FF8A65;
+}
+#title {
+  color: 656565;
+}
 
 
 </style>

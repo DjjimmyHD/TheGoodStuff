@@ -128,6 +128,9 @@ h3{
 hr{
     display: none;
 }
+p, label {
+  color: #656565;
+}
 button{
     display: block;
     margin: 20px 0;

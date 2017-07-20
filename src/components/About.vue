@@ -1,15 +1,15 @@
 <template>
 <div id="about">
   <v-layout row wrap>
-    <v-flex xs12>
+    <v-flex xs10 offset-xs1>
       <v-card id="me" class="elevation-5">
         <v-card-text>
           <h6 class="text-xs-center">About Me</h6>
           <v-layout row justify-center style="position: relative;">
             <v-btn id="butn" @click="about = true">Take the trip</v-btn>
-            <v-card v-if="about">
+            <v-card id="pop-out" class="elevation-10" v-if="about">
               <v-card-title>
-                <div class="headline">Rocky Mountain High Colorado</div>
+                <div class="headline ml-5">Rocky Mountain High Colorado</div>
               </v-card-title>
               <v-card-text>"Not all who wander are lost, but I have a terrible sense of direction"
                 <v-spacer></v-spacer>--- James Schultz.</v-card-text>
@@ -22,15 +22,15 @@
         </v-card-text>
       </v-card>
     </v-flex>
-    <v-flex xs12>
+    <v-flex  xs10 offset-xs1>
       <v-card id="journey" class="elevation-5">
         <v-card-text>
         <h6 class="text-xs-center">The Journey</h6>
         <v-layout row justify-center style="position: relative;">
           <v-btn id="butn" @click="journey = true">Take the trip</v-btn>
-          <v-card v-if="journey">
+          <v-card id="pop-out" class="elevation-10" v-if="journey">
             <v-card-title>
-              <div class="headline">I've worn a lot of hats none of them fit</div>
+              <div class="headline ml-5">I've worn a lot of hats none of them fit</div>
             </v-card-title>
             <v-card-text>"Life is about the journey, about appreciating the struggle. It doesnt matter how you get there as long as you get there."</v-card-text>
             <v-card-actions>
@@ -42,15 +42,15 @@
       </v-card-text>
       </v-card>
     </v-flex>
-    <v-flex xs12>
+    <v-flex  xs10 offset-xs1>
       <v-card id="project" class="elevation-5">
         <v-card-text>
         <h6 class="text-xs-center">The Problem</h6>
         <v-layout row justify-center style="position: relative;">
           <v-btn id="butn" @click="project = true">What is it?</v-btn>
-          <v-card v-if="project">
+          <v-card id="pop-out" class="elevation-10" v-if="project">
             <v-card-title>
-              <div class="headline">Not enough time for meaningful conversation</div>
+              <div class="headline ml-5">Not enough time for meaningful conversation</div>
             </v-card-title>
             <v-card-text>The good stuff is a way to share the improtant things in your life with the important people in your life</v-card-text>
             <v-card-actions>
@@ -62,15 +62,15 @@
       </v-card-text>
     </v-card>
     </v-flex>
-    <v-flex xs12>
-      <v-card id="tech" class="elevation-5">
+    <v-flex  xs10 offset-xs1>
+      <v-card  id="tech" class="elevation-5">
         <v-card-text>
         <h6 class="text-xs-center">The Capstone Shuffle</h6>
         <v-layout row justify-center style="position: relative;">
           <v-btn id="butn" @click="tech = true">Growing Pains</v-btn>
-          <v-card v-if="tech">
+          <v-card id="pop-out" class="elevation-10" v-if="tech">
             <v-card-title>
-              <div class="headline">So much to learn so little time</div>
+              <div class="headline ml-1">So much to learn so little time</div>
             </v-card-title>
             <v-card-text>"I never lose, I win or I learn" ---Michael Scott</v-card-text>
             <v-card-actions>
@@ -82,15 +82,15 @@
       </v-card-text>
     </v-card>
     </v-flex>
-    <v-flex xs12>
+    <v-flex  xs10 offset-xs1>
       <v-card id="future" class="elevation-5">
         <v-card-text>
         <h6 class="text-xs-center">The Future</h6>
         <v-layout row justify-center style="position: relative;">
             <v-btn id="butn" @click="future = true">Looking forward</v-btn>
-            <v-card v-if="future">
+            <v-card id="pop-out" class="elevation-10" v-if="future">
               <v-card-title>
-                <div class="headline">Use Vuex and Build A SQL DB</div>
+                <div class="headline ml-5">Use Vuex and Build A SQL DB</div>
               </v-card-title>
               <v-card-text>I am passionate about this app I want to continue to work on it</v-card-text>
               <v-card-actions>
@@ -102,17 +102,20 @@
       </v-card-text>
       </v-card>
     </v-flex>
-    <v-flex xs12>
+    <v-flex  xs10 offset-xs1>
       <v-card id="contact" class="elevation-5">
         <v-card-text>
         <h6 class="text-xs-center">Contact</h6>
         <v-layout row justify-center style="position: relative;">
-            <v-btn id="butn" @click="contact = true">You could just yell..</v-btn>
-            <v-card v-if="contact">
+            <v-btn id="butn" @click="contact = true">You could just yell...</v-btn>
+            <v-card id="pop-out" class="elevation-10" v-if="contact">
               <v-card-title>
                 <div class="headline">James Schultz</div>
+                <br/>
                 <div class="headline">LinkedIn /ninjames101</div>
+                <br>
                 <div class="headline">Github /ninjames101</div>
+                <br>
                 <div class="headline">ninjames101.ninja</div>
               </v-card-title>
               <v-card-text>"How lucky am I to have something that makes saying goodbye so hard"</v-card-text>
@@ -165,7 +168,12 @@ h6 {
   background-color: #F2EFEA;
 }
 
+
 #butn {
 background: #FF8A65;
+}
+#pop-out{
+  text-align: center;
+  background-color: #656565;
 }
 </style>

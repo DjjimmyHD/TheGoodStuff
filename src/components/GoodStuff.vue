@@ -29,6 +29,9 @@ data () {
   min-height: 100vh;
   flex-direction: column;
 }
+h1 {
+  color: #656565;
+}
 
 
 </style>

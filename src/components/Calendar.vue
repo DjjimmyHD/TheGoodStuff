@@ -159,12 +159,12 @@ h2,.days{
 
 .calendar .prev-month,
 .calendar .next-month {
-	color: #cbd1d2;
+	color: #656565;
 }
 
 .calendar .prev-month:hover,
 .calendar .next-month:hover {
-	border: 2px solid #cbd1d2;
+	border: 1px solid #cbd1d2;
 }
 
 .current-day {

@@ -22,7 +22,8 @@ export default {
 
 <style>
 #app{
-    background-color: #B4EDD2;
+font-family: Roboto,sans-serif;
+background-color: #B4EDD2;
 }
 
 
